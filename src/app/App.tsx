@@ -5,11 +5,14 @@ import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {AlertDialog, Button, XStack, YStack} from 'tamagui';
 import {StackNavigator} from './navigation/navigation';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import dayjs from 'dayjs';
 
 const tamaguiConfig = createTamagui(config);
 
 type Conf = typeof tamaguiConfig;
 declare module '@tamagui/core' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   interface TamaguiCustomConfig extends Conf {}
 }
 

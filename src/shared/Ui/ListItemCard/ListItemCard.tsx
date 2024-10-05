@@ -1,8 +1,8 @@
 import React from 'react';
 import {styled, View} from 'tamagui';
-import type {ListItemCardType} from './types';
 import {PixelText} from '../PixelText';
 import {EPixelEmojiMap, PixelEmoji} from '../PixelEmoji';
+import {ListItemCardType} from '../../../entities';
 
 export const CARD_SIZE = 100;
 

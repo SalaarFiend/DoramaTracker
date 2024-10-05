@@ -3,19 +3,13 @@ import {View} from 'tamagui';
 import {ListItemCard} from '../ListItemCard';
 import {FlashList} from '@shopify/flash-list';
 import {CARD_SIZE} from '../ListItemCard/ListItemCard';
-import {times} from 'lodash';
-import {ListItemCardType} from '../ListItemCard/types';
+import {ListItemCardType} from '../../../entities';
 
-const data: ListItemCardType[] = times(
-  10,
-  (n: number): ListItemCardType => ({
-    name: n % 2 ? 'Бурная жизнь в круглосуточном магазине' : 'Моё имя',
-    status: 'done',
-    rate: n,
-  }),
-);
+type Props = {
+  data: ListItemCardType[];
+};
 
-export const List = (): React.JSX.Element => {
+export const List = ({data}: Props): React.JSX.Element => {
   const renderItem = useCallback(
     ({item}: {item: ListItemCardType}) => <ListItemCard {...item} />,
     [],
