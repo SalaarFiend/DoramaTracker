@@ -1,6 +1,7 @@
 import React from 'react';
 import {styled, Text, View} from 'tamagui';
 import type {ListItemCardType} from './types';
+import {PixelText} from '../PixelText';
 
 export const CARD_SIZE = 100;
 
@@ -16,9 +17,7 @@ export const ListItemCard = ({
       </View>
       <View flex={2.5}>
         <CardText numberOfLines={2}>{name}</CardText>
-        <Text
-          color={'#A39BF9'}
-          fontWeight={'bold'}>{`14.01.24 - 14.02.24 `}</Text>
+        <DateText>{`14.01.24 - 14.02.24 `}</DateText>
       </View>
       <StatusWrap>
         <RateNumber>
@@ -48,9 +47,15 @@ const Card = styled(View, {
   marginVertical: 6,
 });
 
-const CardText = styled(Text, {
+const DateText = styled(PixelText, {
+  color: '#A39BF9',
+  fontSize: 12,
+});
+
+const CardText = styled(PixelText, {
   color: 'black',
-  fontSize: 16,
+  fontSize: 14,
+  lineHeight: 20,
   fontWeight: 'bold',
   marginBottom: 4,
 });
@@ -66,10 +71,10 @@ const StatusBlock = styled(View, {
   justifyContent: 'center',
 });
 
-const StatusText = styled(Text, {
+const StatusText = styled(PixelText, {
   color: 'white',
   fontSize: 12,
-  fontWeight: 'bold',
+  // fontWeight: 'bold',
 });
 
 const StatusWrap = styled(View, {
@@ -88,7 +93,7 @@ const RateNumber = styled(View, {
   justifyContent: 'center',
 });
 
-const RateNumberText = styled(Text, {
+const RateNumberText = styled(PixelText, {
   color: 'black',
   fontSize: 20,
 });

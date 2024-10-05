@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/PixeloidMono.ttf",
+      "sha1": "3e15e507e5294af25cac8076431938c3602caeb5"
+    },
+    {
+      "path": "assets/fonts/PixeloidSans-Bold.ttf",
+      "sha1": "9409184eb7dcf70952a1b0a376650bf6a31d609e"
+    },
+    {
+      "path": "assets/fonts/PixeloidSans.ttf",
+      "sha1": "5aaec55993d6b5dd936786a9aa9db32abd572ab5"
+    }
+  ]
+}
