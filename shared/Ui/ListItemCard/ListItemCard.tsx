@@ -1,25 +1,58 @@
 import React from 'react';
 import {styled, Text, View} from 'tamagui';
+import type {ListItemCardType} from './types';
+
+export const CARD_SIZE = 100;
+
+export const ListItemCard = ({
+  name,
+  status,
+  rate,
+}: ListItemCardType): React.JSX.Element => {
+  return (
+    <Card>
+      <View flex={0.6}>
+        <EmojiAvatar />
+      </View>
+      <View flex={2.5}>
+        <CardText numberOfLines={2}>{name}</CardText>
+        <Text
+          color={'#A39BF9'}
+          fontWeight={'bold'}>{`14.01.24 - 14.02.24 `}</Text>
+      </View>
+      <StatusWrap>
+        <RateNumber>
+          <RateNumberText>{rate}</RateNumberText>
+        </RateNumber>
+        <StatusBlock>
+          <StatusText>{status}</StatusText>
+        </StatusBlock>
+      </StatusWrap>
+    </Card>
+  );
+};
 
 const Card = styled(View, {
   borderWidth: 2,
   borderColor: 'black',
-  borderRadius: 10,
+  borderRadius: 16,
   backgroundColor: 'white',
   paddingVertical: 10,
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
   flex: 1,
-  maxHeight: 100,
+  maxHeight: CARD_SIZE,
+  height: CARD_SIZE,
   paddingHorizontal: 10,
+  marginVertical: 6,
 });
 
 const CardText = styled(Text, {
   color: 'black',
   fontSize: 16,
   fontWeight: 'bold',
-  flex: 2.5,
+  marginBottom: 4,
 });
 
 const StatusBlock = styled(View, {
@@ -65,29 +98,5 @@ const EmojiAvatar = styled(View, {
   height: 50,
   borderWidth: 2,
   borderRadius: 100,
-  backgroundColor: 'blue',
+  backgroundColor: '#E9ABFB',
 });
-
-const placeholder = {
-  name: 'Бурная жизнь в круглосуточном магазине',
-  staus: 'done',
-};
-
-export const ListItemCard = (): React.JSX.Element => {
-  return (
-    <Card>
-      <View flex={0.6}>
-        <EmojiAvatar />
-      </View>
-      <CardText>{placeholder.name}</CardText>
-      <StatusWrap>
-        <RateNumber>
-          <RateNumberText>10</RateNumberText>
-        </RateNumber>
-        <StatusBlock>
-          <StatusText>0</StatusText>
-        </StatusBlock>
-      </StatusWrap>
-    </Card>
-  );
-};
