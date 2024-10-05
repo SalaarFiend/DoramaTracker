@@ -2,5 +2,6 @@ export type ListItemCardType = {
   name: string;
   status: 'done' | 'leaved';
   rate: number;
-  countNumber: number;
+  dateStartWatch?: string;
+  dateEndWatch?: string;
 };

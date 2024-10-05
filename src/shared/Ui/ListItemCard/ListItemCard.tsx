@@ -1,7 +1,8 @@
 import React from 'react';
-import {styled, Text, View} from 'tamagui';
+import {styled, View} from 'tamagui';
 import type {ListItemCardType} from './types';
 import {PixelText} from '../PixelText';
+import {EPixelEmojiMap, PixelEmoji} from '../PixelEmoji';
 
 export const CARD_SIZE = 100;
 
@@ -12,8 +13,12 @@ export const ListItemCard = ({
 }: ListItemCardType): React.JSX.Element => {
   return (
     <Card>
-      <View flex={0.6}>
-        <EmojiAvatar />
+      <View flex={0.4}>
+        <PixelEmoji
+          width={30}
+          height={30}
+          emoji={EPixelEmojiMap.HandCrossFingerHeart}
+        />
       </View>
       <View flex={2.5}>
         <CardText numberOfLines={2}>{name}</CardText>
@@ -32,9 +37,8 @@ export const ListItemCard = ({
 };
 
 const Card = styled(View, {
-  borderWidth: 2,
+  borderWidth: 3,
   borderColor: 'black',
-  borderRadius: 16,
   backgroundColor: 'white',
   paddingVertical: 10,
   flexDirection: 'row',
@@ -63,8 +67,7 @@ const CardText = styled(PixelText, {
 const StatusBlock = styled(View, {
   backgroundColor: '#6ED374',
   alignItems: 'center',
-  borderRadius: 100,
-  borderWidth: 2,
+  borderWidth: 3,
   height: 20,
   width: 40,
   marginTop: 12,
@@ -73,8 +76,8 @@ const StatusBlock = styled(View, {
 
 const StatusText = styled(PixelText, {
   color: 'white',
-  fontSize: 12,
-  // fontWeight: 'bold',
+  fontSize: 10,
+  fontWeight: 'bold',
 });
 
 const StatusWrap = styled(View, {
@@ -82,8 +85,7 @@ const StatusWrap = styled(View, {
 });
 
 const RateNumber = styled(View, {
-  borderWidth: 2,
-  borderRadius: 8,
+  borderWidth: 3,
   borderColor: 'black',
   paddingVertical: 2,
   paddingHorizontal: 7,
@@ -96,12 +98,4 @@ const RateNumber = styled(View, {
 const RateNumberText = styled(PixelText, {
   color: 'black',
   fontSize: 20,
-});
-
-const EmojiAvatar = styled(View, {
-  width: 50,
-  height: 50,
-  borderWidth: 2,
-  borderRadius: 100,
-  backgroundColor: '#E9ABFB',
 });
