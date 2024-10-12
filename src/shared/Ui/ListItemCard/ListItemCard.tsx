@@ -3,6 +3,7 @@ import {styled, View} from 'tamagui';
 import {PixelText} from '../PixelText';
 import {EPixelEmojiMap, PixelEmoji} from '../PixelEmoji';
 import {ListItemCardType} from '../../../entities';
+import {AppColors} from '../Colors/colors';
 
 export const CARD_SIZE = 100;
 
@@ -52,7 +53,7 @@ const Card = styled(View, {
 });
 
 const DateText = styled(PixelText, {
-  color: '#A39BF9',
+  color: AppColors.alternateTextColor,
   fontSize: 12,
 });
 

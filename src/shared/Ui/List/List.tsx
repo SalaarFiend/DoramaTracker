@@ -15,7 +15,7 @@ export const List = ({data}: Props): React.JSX.Element => {
     [],
   );
   return (
-    <View paddingVertical={12} paddingHorizontal={16} flex={1}>
+    <View paddingHorizontal={16} flex={1}>
       <FlashList
         data={data}
         renderItem={renderItem}

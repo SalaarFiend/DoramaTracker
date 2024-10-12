@@ -2,7 +2,9 @@ import {styled} from 'tamagui';
 
 import {fonts} from '../../fonts/fonts';
 import {Text} from '@tamagui/core';
+import {AppColors} from '../Colors/colors';
 
 export const PixelText = styled(Text, {
-  fontFamily: 'Pixeloid Sans',
+  fontFamily: fonts.PixeloidSans,
+  color: AppColors.baseTextColor,
 });

@@ -1,3 +1,3 @@
 export const fonts = {
-  CyrillicPixel7: 'CyrillicPixel7',
+  PixeloidSans: 'Pixeloid Sans',
 };
