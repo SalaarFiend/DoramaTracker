@@ -1,39 +1,53 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {styled, View} from 'tamagui';
 import {PixelText} from '../PixelText';
 import {EPixelEmojiMap, PixelEmoji} from '../PixelEmoji';
 import {ListItemCardType} from '../../../entities';
 import {AppColors} from '../Colors/colors';
+import {Pressable} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {EScreens, RootStackNavigationProp} from '../../../app/navigation';
 
 export const CARD_SIZE = 100;
+
+const {textColors} = AppColors;
 
 export const ListItemCard = ({
   name,
   status,
   rate,
+  id,
 }: ListItemCardType): React.JSX.Element => {
+  const navigation = useNavigation<RootStackNavigationProp>();
+
+  const goToEdit = useCallback(() => {
+    navigation.navigate(EScreens.EditScreen, {id});
+  }, []);
+
   return (
-    <Card>
-      <View flex={0.4}>
-        <PixelEmoji
-          width={30}
-          height={30}
-          emoji={EPixelEmojiMap.HandCrossFingerHeart}
-        />
-      </View>
-      <View flex={2.5}>
-        <CardText numberOfLines={2}>{name}</CardText>
-        <DateText>{`14.01.24 - 14.02.24 `}</DateText>
-      </View>
-      <StatusWrap>
-        <RateNumber>
-          <RateNumberText>{rate}</RateNumberText>
-        </RateNumber>
-        <StatusBlock>
-          <StatusText>{status}</StatusText>
-        </StatusBlock>
-      </StatusWrap>
-    </Card>
+    <Pressable onPress={goToEdit} key={name + rate}>
+      <Card>
+        <View flex={0.4}>
+          <PixelEmoji
+            width={30}
+            height={30}
+            emoji={EPixelEmojiMap.HandCrossFingerHeart}
+          />
+        </View>
+        <View flex={2.5}>
+          <CardText numberOfLines={2}>{name}</CardText>
+          <DateText>{`14.01.24 - 14.02.24 `}</DateText>
+        </View>
+        <StatusWrap>
+          <RateNumber>
+            <RateNumberText>{rate}</RateNumberText>
+          </RateNumber>
+          <StatusBlock>
+            <StatusText>{status}</StatusText>
+          </StatusBlock>
+        </StatusWrap>
+      </Card>
+    </Pressable>
   );
 };
 
@@ -53,7 +67,7 @@ const Card = styled(View, {
 });
 
 const DateText = styled(PixelText, {
-  color: AppColors.alternateTextColor,
+  color: textColors.alternateTextColor,
   fontSize: 12,
 });
 

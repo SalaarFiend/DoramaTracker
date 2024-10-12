@@ -4,4 +4,5 @@ export type ListItemCardType = {
   rate: number;
   dateStartWatch?: string;
   dateEndWatch?: string;
+  id: string;
 };

@@ -6,5 +6,5 @@ import {AppColors} from '../Colors/colors';
 
 export const PixelText = styled(Text, {
   fontFamily: fonts.PixeloidSans,
-  color: AppColors.baseTextColor,
+  color: AppColors.textColors.baseTextColor,
 });

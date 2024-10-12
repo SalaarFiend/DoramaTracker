@@ -2,7 +2,7 @@ import {create} from 'zustand';
 import {persist} from 'zustand/middleware';
 import {storageForZustand} from '../../shared/storePersist';
 import {ListItemCardType} from '../model/model';
-import {times} from 'lodash';
+import {times, uniqueId} from 'lodash';
 
 interface State {
   items: ListItemCardType[];
@@ -14,6 +14,7 @@ const placeholderData = times(
     name: n % 2 ? 'Бурная жизнь в круглосуточном магазине' : 'Моё имя',
     status: 'done',
     rate: n,
+    id: uniqueId('item' + n),
   }),
 );
 
