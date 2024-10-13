@@ -4,3 +4,4 @@ export * from './PixelText';
 export * from './PixelEmoji';
 export * from './NavigationHeader';
 export * from './Colors';
+export * from './PixelSlider';

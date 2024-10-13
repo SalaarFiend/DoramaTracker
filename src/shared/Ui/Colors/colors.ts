@@ -4,4 +4,10 @@ export const AppColors = {
   background: {
     backgroundBaseColor: '#A39BF9',
   },
+
+  rate: {
+    zeroToThree: '#D23B35',
+    fourToSix: '#EDBD66',
+    sevenToTen: '#7ED375',
+  },
 };
