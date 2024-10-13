@@ -1,4 +1,4 @@
-import React, {memo, useState} from 'react';
+import React, {memo, useMemo, useState} from 'react';
 import {Slider, styled, View} from 'tamagui';
 import {PixelText} from '../PixelText';
 import {AppColors} from '../Colors';
@@ -24,7 +24,7 @@ const colorMap = (value: number) => {
 export const PixelSlider = memo(function PixelSlider() {
   const [value, setValue] = useState([10]);
 
-  const rateValue = value[0] / 10;
+  const rateValue = useMemo(() => value[0] / 10, [value]);
   return (
     <View>
       <RowRateText>
