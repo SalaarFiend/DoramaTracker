@@ -3,7 +3,7 @@ import {config} from '@tamagui/config';
 import {createTamagui, TamaguiProvider} from '@tamagui/core';
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {AlertDialog, Button, XStack, YStack} from 'tamagui';
+import {AlertDialog, Button, PortalProvider, XStack, YStack} from 'tamagui';
 import {StackNavigator} from './navigation/navigation';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import dayjs from 'dayjs';
@@ -74,9 +74,11 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <SafeAreaProvider>
-        <TamaguiProvider config={tamaguiConfig}>
-          <StackNavigator />
-        </TamaguiProvider>
+        <PortalProvider>
+          <TamaguiProvider config={tamaguiConfig}>
+            <StackNavigator />
+          </TamaguiProvider>
+        </PortalProvider>
       </SafeAreaProvider>
     </NavigationContainer>
   );

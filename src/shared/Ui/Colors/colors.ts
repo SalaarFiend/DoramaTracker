@@ -5,6 +5,10 @@ export const AppColors = {
     backgroundBaseColor: '#A39BF9',
   },
 
+  border: {
+    baseBorder: '#000000',
+  },
+
   rate: {
     zeroToThree: '#D23B35',
     fourToSix: '#EDBD66',

@@ -12,6 +12,14 @@
     {
       "path": "assets/fonts/PixeloidSans.ttf",
       "sha1": "5aaec55993d6b5dd936786a9aa9db32abd572ab5"
+    },
+    {
+      "path": "src/shared/Ui/Icon/dist/icons.json",
+      "sha1": "3f75bee82247ee00d4d13fbebfd69bbc40eb0f9d"
+    },
+    {
+      "path": "src/shared/Ui/Icon/dist/icons.ttf",
+      "sha1": "3176674ee758e86eb92dd78e588b010bcd6fe32b"
     }
   ]
 }

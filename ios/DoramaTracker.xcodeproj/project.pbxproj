@@ -18,6 +18,8 @@
 		7699B88040F8A987B510C191 /* libPods-DoramaTracker-DoramaTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DoramaTracker-DoramaTrackerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		E23892D4BEBE471D86FBEA7A /* PixeloidMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15674F35CA8447229B7D8553 /* PixeloidMono.ttf */; };
+		C06874F4B5DB49FC8B345A88 /* icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B88E67A1233743B1AC3AE405 /* icons.ttf */; };
+		C2AA30F17E4345328800AE14 /* icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D78598880254D20BE1E5C89 /* icons.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-DoramaTracker-DoramaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoramaTracker-DoramaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-DoramaTracker-DoramaTrackerTests/Pods-DoramaTracker-DoramaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4F70CECFE3B40589237E81E /* PixeloidSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "PixeloidSans-Bold.ttf"; path = "../assets/fonts/PixeloidSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B88E67A1233743B1AC3AE405 /* icons.ttf */ = {isa = PBXFileReference; name = "icons.ttf"; path = "../src/shared/Ui/Icon/dist/icons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D78598880254D20BE1E5C89 /* icons.json */ = {isa = PBXFileReference; name = "icons.json"; path = "../src/shared/Ui/Icon/dist/icons.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				15674F35CA8447229B7D8553 /* PixeloidMono.ttf */,
 				C4F70CECFE3B40589237E81E /* PixeloidSans-Bold.ttf */,
 				770AB08A2A6141C686E1056C /* PixeloidSans.ttf */,
+				B88E67A1233743B1AC3AE405 /* icons.ttf */,
+				8D78598880254D20BE1E5C89 /* icons.json */,
 			);
 			name = Resources;
 			path = "";
@@ -270,6 +276,8 @@
 				E23892D4BEBE471D86FBEA7A /* PixeloidMono.ttf in Resources */,
 				4DA3A35AA90A462E9C4AF9B9 /* PixeloidSans-Bold.ttf in Resources */,
 				1E60268AB7D949C3A5A7C784 /* PixeloidSans.ttf in Resources */,
+				C06874F4B5DB49FC8B345A88 /* icons.ttf in Resources */,
+				C2AA30F17E4345328800AE14 /* icons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

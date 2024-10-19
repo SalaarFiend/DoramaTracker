@@ -1,1 +1,1 @@
-export {PixelText} from './PixelText';
+export {PixelText, PixelTextStyle} from './PixelText';

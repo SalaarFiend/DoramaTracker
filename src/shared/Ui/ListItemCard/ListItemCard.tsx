@@ -1,12 +1,13 @@
 import React, {useCallback} from 'react';
 import {styled, View} from 'tamagui';
 import {PixelText} from '../PixelText';
-import {EPixelEmojiMap, PixelEmoji} from '../PixelEmoji';
+
 import {ListItemCardType} from '../../../entities';
 import {AppColors} from '../Colors/colors';
 import {Pressable} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {EScreens, RootStackNavigationProp} from '../../../app/navigation';
+import {CustomIcon, IconNames} from '../Icon';
 
 export const CARD_SIZE = 100;
 
@@ -28,11 +29,7 @@ export const ListItemCard = ({
     <Pressable onPress={goToEdit} key={name + rate}>
       <Card>
         <View flex={0.4}>
-          <PixelEmoji
-            width={30}
-            height={30}
-            emoji={EPixelEmojiMap.HandCrossFingerHeart}
-          />
+          <CustomIcon name={IconNames.HandCrossFingerHeart} size={30} />
         </View>
         <View flex={2.5}>
           <CardText numberOfLines={2}>{name}</CardText>
